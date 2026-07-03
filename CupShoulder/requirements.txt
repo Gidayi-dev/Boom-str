@@ -1,0 +1,6 @@
+pandas
+MetaTrader5
+websockets>=12.0
+python-dotenv>=1.0
+win10toast
+requests
