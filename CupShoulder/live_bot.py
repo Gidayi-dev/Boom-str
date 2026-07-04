@@ -1,25 +1,3 @@
-"""
-live_bot.py
-
-THE bot. Run this and leave it running:
-
-    python live_bot.py
-
-What it does, every POLL_INTERVAL_SECONDS:
-  1. Pulls fresh 1H candles from MT5
-  2. Scans for cup-and-handle patterns (cup -> handle -> breakout -> retest)
-  3. Logs any newly confirmed pattern to journal.csv
-  4. Sends you a Telegram + desktop popup alert for each NEW confirmed pattern
-  5. Pulls M1 candles to check what actually happened after past retests
-     (5/10/15/30 min later) and records WIN/LOSS/FLAT into the journal
-  6. Saves journal.csv so you always have a running, growing track record
-
-Stop it any time with Ctrl+C -- it shuts down the MT5 connection cleanly.
-
-Requires: MetaTrader5, pandas, requests, (optional) win10toast
-    pip install MetaTrader5 pandas requests win10toast
-"""
-
 import time
 import traceback
 from datetime import datetime, timedelta
